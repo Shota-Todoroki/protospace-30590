@@ -31,7 +31,7 @@
         </div>
       </div>
       <div class="prototype__comments">
-        <% if current_user %>
+        <% if user_signed_in? %>
           <%= form_with(model: [@prototype, @comment],local: true) do |f|%>
             <div class="field">
               <%= f.label :comment, "コメント" %><br />
